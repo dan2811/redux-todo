@@ -1,0 +1,36 @@
+.input {
+    height: 50px;
+    width: 80%;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: inherit;
+}
+
+input {
+    height: 50px;
+    border-radius: 12px;
+    background: white;
+    border: none;
+    margin-left: 12px;
+    flex: 1;
+    margin-right: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 50px;
+}
+
+button:hover {
+box-shadow: 0px 0px 8px #888888;
+}
