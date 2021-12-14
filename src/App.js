@@ -2,7 +2,7 @@ import React from 'react';
 import Input from './Components/Input';
 import './App.css';
 import TodoItem from './Components/TodoItem';
-
+import ClearDoneTodos from './Components/ClearDoneTodos';
 import { useSelector } from 'react-redux';
 import { selectTodoList } from './features/todoSlice';
 
@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <div className="app__container">
         <div className="app__todoContainer">
+        <ClearDoneTodos/>
         {
           todoList.map(item => (
             <TodoItem 

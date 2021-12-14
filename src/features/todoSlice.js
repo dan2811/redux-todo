@@ -21,12 +21,21 @@ const todoSlice = createSlice({
                         item.done = true
                     }
                 }
+                return '';
             })
+        },
+
+        cleanTodos: (state, action) => {
+            action.payload.forEach(todo => {
+                let idx = state.todoList.indexOf(todo);
+                state.todoList.splice(idx, 1);
+            })
+           
         }
      }
 });
 
-export const { saveTodo, setCheck } = todoSlice.actions
+export const { saveTodo, setCheck, cleanTodos } = todoSlice.actions
 
 export const selectTodoList = state => state.todos.todoList
 
