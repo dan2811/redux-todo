@@ -5,7 +5,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Input />
+      <div className="app__container">
+        <div className="app__todoContainer">
+
+        </div>
+        <Input />
+      </div>
     </div>
   );
 }
