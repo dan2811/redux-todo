@@ -6,12 +6,10 @@ import { saveTodo } from '../features/todoSlice'
 
 const Input = () => {
 
-    const [input, setInput] = useState('')
-    const dispatch = useDispatch()
+    const [input, setInput] = useState('');
+    const dispatch = useDispatch();
 
     const addTodo = () => {
-        console.log(`Adding ${input}`)
-
         dispatch(saveTodo({
             item: input,
             done: false,

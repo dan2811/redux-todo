@@ -19,6 +19,7 @@ const TodoItem = ({name, done, id}) => {
             />
        
         <p className={done && 'todoItem--done'}>{name}</p>
+        {console.log(name)}
         </div>
     )
 }
