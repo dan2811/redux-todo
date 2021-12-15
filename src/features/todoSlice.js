@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     todoList: []
-}
+};
 
 const todoSlice = createSlice({
     name: 'todos',
@@ -22,21 +22,26 @@ const todoSlice = createSlice({
                     }
                 }
                 return '';
-            })
+            });
         },
 
         cleanTodos: (state, action) => {
+            
             action.payload.forEach(todo => {
-                let idx = state.todoList.indexOf(todo);
-                state.todoList.splice(idx, 1);
+                let id = todo.id;
+                for(var i = 0; i < state.todoList.length; i++) {
+                    if(id === state.todoList[i].id) {
+                            state.todoList.splice(i, 1);
+                        break;
+                    }
+                }
             })
-           
         }
      }
 });
 
-export const { saveTodo, setCheck, cleanTodos } = todoSlice.actions
+export const { saveTodo, setCheck, cleanTodos } = todoSlice.actions;
 
-export const selectTodoList = state => state.todos.todoList
+export const selectTodoList = state => state.todos.todoList;
 
-export default todoSlice.reducer
+export default todoSlice.reducer;

@@ -10,7 +10,6 @@ const ClearDoneTodos = () => {
 
     const cleanUp = () => {
         const completeTodos = todoList.filter(todo => todo.done === true);
-        console.log('completed todos:', completeTodos);
         dispatch(cleanTodos(completeTodos));
     }
 
